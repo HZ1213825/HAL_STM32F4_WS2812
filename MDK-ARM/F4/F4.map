@@ -31,6 +31,7 @@ Section Cross References
     main.o(i.main) refers to tim.o(i.MX_TIM9_Init) for MX_TIM9_Init
     main.o(i.main) refers to ws2812.o(i.WS2812_Start) for WS2812_Start
     main.o(i.main) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
+    main.o(i.main) refers to ws2812.o(.bss) for WS2812_Data
     dma.o(i.MX_DMA_Init) refers to stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
     dma.o(i.MX_DMA_Init) refers to stm32f4xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ) for HAL_NVIC_EnableIRQ
     tim.o(i.HAL_TIM_Base_MspDeInit) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_DeInit) for HAL_DMA_DeInit
@@ -419,7 +420,7 @@ Section Cross References
     system_stm32f4xx.o(i.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.data) for .data
     system_stm32f4xx.o(i.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.constdata) for .constdata
     ws2812.o(i.WS2812_Code_Reast) refers to stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_Start_DMA) for HAL_TIM_PWM_Start_DMA
-    ws2812.o(i.WS2812_Code_Reast) refers to ws2812.o(.bss) for .bss
+    ws2812.o(i.WS2812_Code_Reast) refers to ws2812.o(.constdata) for .constdata
     ws2812.o(i.WS2812_Code_Reast) refers to tim.o(.bss) for htim1
     ws2812.o(i.WS2812_Code_Reast) refers to ws2812.o(.data) for .data
     ws2812.o(i.WS2812_Send) refers to stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_Start_DMA) for HAL_TIM_PWM_Start_DMA
@@ -430,8 +431,9 @@ Section Cross References
     ws2812.o(i.WS2812_Send) refers to tim.o(.bss) for htim1
     ws2812.o(i.WS2812_Start) refers to stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_Start_DMA) for HAL_TIM_PWM_Start_DMA
     ws2812.o(i.WS2812_Start) refers to ws2812.o(i.WS2812_uint32ToData) for WS2812_uint32ToData
-    ws2812.o(i.WS2812_Start) refers to ws2812.o(.bss) for .bss
+    ws2812.o(i.WS2812_Start) refers to ws2812.o(.constdata) for .constdata
     ws2812.o(i.WS2812_Start) refers to tim.o(.bss) for htim1
+    ws2812.o(i.WS2812_Start) refers to ws2812.o(.bss) for .bss
     ws2812.o(i.WS2812_Start) refers to ws2812.o(.data) for .data
     print.o(i.fgetc) refers to stm32f4xx_hal_uart.o(i.HAL_UART_Receive) for HAL_UART_Receive
     print.o(i.fgetc) refers to usart.o(.bss) for huart1
@@ -908,21 +910,21 @@ Image Symbol Table
     ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c 0x00000000   Number         0  stm32f4xx_hal_tim_ex.o ABSOLUTE
     ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c 0x00000000   Number         0  stm32f4xx_hal_uart.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ..\Core\Src\dma.c                        0x00000000   Number         0  dma.o ABSOLUTE
     ..\Core\Src\gpio.c                       0x00000000   Number         0  gpio.o ABSOLUTE
@@ -1058,26 +1060,27 @@ Image Symbol Table
     i.UsageFault_Handler                     0x08001d24   Section        0  stm32f4xx_it.o(i.UsageFault_Handler)
     i.WS2812_Send                            0x08001d28   Section        0  ws2812.o(i.WS2812_Send)
     i.WS2812_Start                           0x08001da0   Section        0  ws2812.o(i.WS2812_Start)
-    i.WS2812_uint32ToData                    0x08001dd0   Section        0  ws2812.o(i.WS2812_uint32ToData)
-    i.__NVIC_SetPriority                     0x08001e06   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x08001e07   Thumb Code    32  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
-    i.__scatterload_copy                     0x08001e26   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08001e34   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08001e36   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.main                                   0x08001e44   Section        0  main.o(i.main)
-    .constdata                               0x08001e70   Section        8  stm32f4xx_hal_dma.o(.constdata)
-    flagBitshiftOffset                       0x08001e70   Data           8  stm32f4xx_hal_dma.o(.constdata)
-    .constdata                               0x08001e78   Section       16  system_stm32f4xx.o(.constdata)
-    .constdata                               0x08001e88   Section        8  system_stm32f4xx.o(.constdata)
+    i.WS2812_uint32ToData                    0x08001dd4   Section        0  ws2812.o(i.WS2812_uint32ToData)
+    i.__NVIC_SetPriority                     0x08001e0a   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x08001e0b   Thumb Code    32  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
+    i.__scatterload_copy                     0x08001e2a   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08001e38   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08001e3a   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.main                                   0x08001e48   Section        0  main.o(i.main)
+    .constdata                               0x08001e8c   Section        8  stm32f4xx_hal_dma.o(.constdata)
+    flagBitshiftOffset                       0x08001e8c   Data           8  stm32f4xx_hal_dma.o(.constdata)
+    .constdata                               0x08001e94   Section       16  system_stm32f4xx.o(.constdata)
+    .constdata                               0x08001ea4   Section        8  system_stm32f4xx.o(.constdata)
+    .constdata                               0x08001eac   Section      960  ws2812.o(.constdata)
     .data                                    0x20000000   Section       12  stm32f4xx_hal.o(.data)
     .data                                    0x2000000c   Section        4  system_stm32f4xx.o(.data)
-    .data                                    0x20000010   Section       44  ws2812.o(.data)
+    .data                                    0x20000010   Section       12  ws2812.o(.data)
     j                                        0x20000014   Data           4  ws2812.o(.data)
     ins                                      0x20000018   Data           4  ws2812.o(.data)
-    .bss                                     0x2000003c   Section      240  tim.o(.bss)
-    .bss                                     0x2000012c   Section       68  usart.o(.bss)
-    .bss                                     0x20000170   Section     1160  ws2812.o(.bss)
-    STACK                                    0x200005f8   Section     1024  startup_stm32f401xc.o(STACK)
+    .bss                                     0x2000001c   Section      240  tim.o(.bss)
+    .bss                                     0x2000010c   Section       68  usart.o(.bss)
+    .bss                                     0x20000150   Section      232  ws2812.o(.bss)
+    STACK                                    0x20000238   Section     1024  startup_stm32f401xc.o(STACK)
 
     Global Symbols
 
@@ -1232,31 +1235,31 @@ Image Symbol Table
     TIM_ETR_SetConfig                        0x08001a69   Thumb Code    20  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
     TIM_OC2_SetConfig                        0x08001add   Thumb Code    84  stm32f4xx_hal_tim.o(i.TIM_OC2_SetConfig)
     UsageFault_Handler                       0x08001d25   Thumb Code     2  stm32f4xx_it.o(i.UsageFault_Handler)
-    WS2812_Send                              0x08001d29   Thumb Code   106  ws2812.o(i.WS2812_Send)
-    WS2812_Start                             0x08001da1   Thumb Code    36  ws2812.o(i.WS2812_Start)
-    WS2812_uint32ToData                      0x08001dd1   Thumb Code    54  ws2812.o(i.WS2812_uint32ToData)
-    __scatterload_copy                       0x08001e27   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08001e35   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08001e37   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    main                                     0x08001e45   Thumb Code    44  main.o(i.main)
-    AHBPrescTable                            0x08001e78   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x08001e88   Data           8  system_stm32f4xx.o(.constdata)
-    Region$$Table$$Base                      0x08001e90   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08001eb0   Number         0  anon$$obj.o(Region$$Table)
+    WS2812_Send                              0x08001d29   Thumb Code   108  ws2812.o(i.WS2812_Send)
+    WS2812_Start                             0x08001da1   Thumb Code    34  ws2812.o(i.WS2812_Start)
+    WS2812_uint32ToData                      0x08001dd5   Thumb Code    54  ws2812.o(i.WS2812_uint32ToData)
+    __scatterload_copy                       0x08001e2b   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08001e39   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08001e3b   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x08001e49   Thumb Code    64  main.o(i.main)
+    AHBPrescTable                            0x08001e94   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x08001ea4   Data           8  system_stm32f4xx.o(.constdata)
+    WS2812_Rst                               0x08001eac   Data         960  ws2812.o(.constdata)
+    Region$$Table$$Base                      0x0800226c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800228c   Number         0  anon$$obj.o(Region$$Table)
     uwTickFreq                               0x20000000   Data           1  stm32f4xx_hal.o(.data)
     uwTickPrio                               0x20000004   Data           4  stm32f4xx_hal.o(.data)
     uwTick                                   0x20000008   Data           4  stm32f4xx_hal.o(.data)
     SystemCoreClock                          0x2000000c   Data           4  system_stm32f4xx.o(.data)
     WS2812_En                                0x20000010   Data           4  ws2812.o(.data)
-    WS2812_Data                              0x2000001c   Data          32  ws2812.o(.data)
-    htim1                                    0x2000003c   Data          72  tim.o(.bss)
-    htim9                                    0x20000084   Data          72  tim.o(.bss)
-    hdma_tim1_ch1                            0x200000cc   Data          96  tim.o(.bss)
-    huart1                                   0x2000012c   Data          68  usart.o(.bss)
+    htim1                                    0x2000001c   Data          72  tim.o(.bss)
+    htim9                                    0x20000064   Data          72  tim.o(.bss)
+    hdma_tim1_ch1                            0x200000ac   Data          96  tim.o(.bss)
+    huart1                                   0x2000010c   Data          68  usart.o(.bss)
+    WS2812_Data                              0x20000150   Data          32  ws2812.o(.bss)
     WS2812_SendBuf0                          0x20000170   Data         100  ws2812.o(.bss)
     WS2812_SendBuf1                          0x200001d4   Data         100  ws2812.o(.bss)
-    WS2812_Rst                               0x20000238   Data         960  ws2812.o(.bss)
-    __initial_sp                             0x200009f8   Data           0  startup_stm32f401xc.o(STACK)
+    __initial_sp                             0x20000638   Data           0  startup_stm32f401xc.o(STACK)
 
 
 
@@ -1266,28 +1269,28 @@ Memory Map of the image
 
   Image Entry point : 0x08000195
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001eec, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000022a8, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001eb0, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000228c, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000194   Data   RO            3    RESET               startup_stm32f401xc.o
-    0x08000194   0x08000194   0x00000000   Code   RO         3063  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000194   0x08000194   0x00000004   Code   RO         3070    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000198   0x08000198   0x00000004   Code   RO         3073    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x0800019c   0x0800019c   0x00000000   Code   RO         3075    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x0800019c   0x0800019c   0x00000000   Code   RO         3077    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x0800019c   0x0800019c   0x00000008   Code   RO         3078    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080001a4   0x080001a4   0x00000000   Code   RO         3080    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080001a4   0x080001a4   0x00000000   Code   RO         3082    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080001a4   0x080001a4   0x00000004   Code   RO         3071    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000194   0x08000194   0x00000000   Code   RO         3064  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000194   0x08000194   0x00000004   Code   RO         3071    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000198   0x08000198   0x00000004   Code   RO         3074    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x0800019c   0x0800019c   0x00000000   Code   RO         3076    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x0800019c   0x0800019c   0x00000000   Code   RO         3078    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x0800019c   0x0800019c   0x00000008   Code   RO         3079    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001a4   0x080001a4   0x00000000   Code   RO         3081    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080001a4   0x080001a4   0x00000000   Code   RO         3083    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080001a4   0x080001a4   0x00000004   Code   RO         3072    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x080001a8   0x080001a8   0x00000024   Code   RO            4    .text               startup_stm32f401xc.o
-    0x080001cc   0x080001cc   0x00000062   Code   RO         3066    .text               mc_w.l(uldiv.o)
-    0x0800022e   0x0800022e   0x00000024   Code   RO         3068    .text               mc_w.l(memseta.o)
-    0x08000252   0x08000252   0x0000001e   Code   RO         3084    .text               mc_w.l(llshl.o)
-    0x08000270   0x08000270   0x00000020   Code   RO         3086    .text               mc_w.l(llushr.o)
-    0x08000290   0x08000290   0x00000024   Code   RO         3088    .text               mc_w.l(init.o)
+    0x080001cc   0x080001cc   0x00000062   Code   RO         3067    .text               mc_w.l(uldiv.o)
+    0x0800022e   0x0800022e   0x00000024   Code   RO         3069    .text               mc_w.l(memseta.o)
+    0x08000252   0x08000252   0x0000001e   Code   RO         3085    .text               mc_w.l(llshl.o)
+    0x08000270   0x08000270   0x00000020   Code   RO         3087    .text               mc_w.l(llushr.o)
+    0x08000290   0x08000290   0x00000024   Code   RO         3089    .text               mc_w.l(init.o)
     0x080002b4   0x080002b4   0x00000002   Code   RO          324    i.BusFault_Handler  stm32f4xx_it.o
     0x080002b6   0x080002b6   0x00000002   PAD
     0x080002b8   0x080002b8   0x0000000c   Code   RO          325    i.DMA2_Stream1_IRQHandler  stm32f4xx_it.o
@@ -1371,30 +1374,31 @@ Memory Map of the image
     0x08001d24   0x08001d24   0x00000002   Code   RO          333    i.UsageFault_Handler  stm32f4xx_it.o
     0x08001d26   0x08001d26   0x00000002   PAD
     0x08001d28   0x08001d28   0x00000078   Code   RO         2979    i.WS2812_Send       ws2812.o
-    0x08001da0   0x08001da0   0x00000030   Code   RO         2980    i.WS2812_Start      ws2812.o
-    0x08001dd0   0x08001dd0   0x00000036   Code   RO         2981    i.WS2812_uint32ToData  ws2812.o
-    0x08001e06   0x08001e06   0x00000020   Code   RO         2208    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x08001e26   0x08001e26   0x0000000e   Code   RO         3092    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08001e34   0x08001e34   0x00000002   Code   RO         3093    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08001e36   0x08001e36   0x0000000e   Code   RO         3094    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08001e44   0x08001e44   0x0000002c   Code   RO           16    i.main              main.o
-    0x08001e70   0x08001e70   0x00000008   Data   RO         1901    .constdata          stm32f4xx_hal_dma.o
-    0x08001e78   0x08001e78   0x00000010   Data   RO         2942    .constdata          system_stm32f4xx.o
-    0x08001e88   0x08001e88   0x00000008   Data   RO         2943    .constdata          system_stm32f4xx.o
-    0x08001e90   0x08001e90   0x00000020   Data   RO         3090    Region$$Table       anon$$obj.o
+    0x08001da0   0x08001da0   0x00000034   Code   RO         2980    i.WS2812_Start      ws2812.o
+    0x08001dd4   0x08001dd4   0x00000036   Code   RO         2981    i.WS2812_uint32ToData  ws2812.o
+    0x08001e0a   0x08001e0a   0x00000020   Code   RO         2208    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
+    0x08001e2a   0x08001e2a   0x0000000e   Code   RO         3093    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001e38   0x08001e38   0x00000002   Code   RO         3094    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001e3a   0x08001e3a   0x0000000e   Code   RO         3095    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001e48   0x08001e48   0x00000044   Code   RO           16    i.main              main.o
+    0x08001e8c   0x08001e8c   0x00000008   Data   RO         1901    .constdata          stm32f4xx_hal_dma.o
+    0x08001e94   0x08001e94   0x00000010   Data   RO         2942    .constdata          system_stm32f4xx.o
+    0x08001ea4   0x08001ea4   0x00000008   Data   RO         2943    .constdata          system_stm32f4xx.o
+    0x08001eac   0x08001eac   0x000003c0   Data   RO         2983    .constdata          ws2812.o
+    0x0800226c   0x0800226c   0x00000020   Data   RO         3091    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08001eb0, Size: 0x000009f8, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800228c, Size: 0x00000638, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08001eb0   0x0000000c   Data   RW         2352    .data               stm32f4xx_hal.o
-    0x2000000c   0x08001ebc   0x00000004   Data   RW         2944    .data               system_stm32f4xx.o
-    0x20000010   0x08001ec0   0x0000002c   Data   RW         2983    .data               ws2812.o
-    0x2000003c        -       0x000000f0   Zero   RW          233    .bss                tim.o
-    0x2000012c        -       0x00000044   Zero   RW          285    .bss                usart.o
-    0x20000170        -       0x00000488   Zero   RW         2982    .bss                ws2812.o
-    0x200005f8        -       0x00000400   Zero   RW            1    STACK               startup_stm32f401xc.o
+    0x20000000   0x0800228c   0x0000000c   Data   RW         2352    .data               stm32f4xx_hal.o
+    0x2000000c   0x08002298   0x00000004   Data   RW         2944    .data               system_stm32f4xx.o
+    0x20000010   0x0800229c   0x0000000c   Data   RW         2984    .data               ws2812.o
+    0x2000001c        -       0x000000f0   Zero   RW          233    .bss                tim.o
+    0x2000010c        -       0x00000044   Zero   RW          285    .bss                usart.o
+    0x20000150        -       0x000000e8   Zero   RW         2982    .bss                ws2812.o
+    0x20000238        -       0x00000400   Zero   RW            1    STACK               startup_stm32f401xc.o
 
 
 ==============================================================================
@@ -1406,7 +1410,7 @@ Image component sizes
 
         44          4          0          0          0        758   dma.o
         44          6          0          0          0        783   gpio.o
-       200          8          0          0          0     419140   main.o
+       224         12          0          0          0     419200   main.o
         36          8        404          0       1024        828   startup_stm32f401xc.o
        180         28          0         12          0       9205   stm32f4xx_hal.o
        198         14          0          0          0      33899   stm32f4xx_hal_cortex.o
@@ -1421,10 +1425,10 @@ Image component sizes
         16          4         24          4          0       1103   system_stm32f4xx.o
        492         52          0          0        240       3147   tim.o
        164         22          0          0         68       1678   usart.o
-       222         26          0         44       1160       2502   ws2812.o
+       226         30        960         12        232       2514   ws2812.o
 
     ----------------------------------------------------------------------
-      7106        428        468         60       2492     512825   Object Totals
+      7134        436       1428         28       1564     512897   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         22          0          0          0          0          0   (incl. Padding)
 
@@ -1467,15 +1471,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      7388        444        468         60       2492     506429   Grand Totals
-      7388        444        468         60       2492     506429   ELF Image Totals
-      7388        444        468         60          0          0   ROM Totals
+      7416        452       1428         28       1564     506501   Grand Totals
+      7416        452       1428         28       1564     506501   ELF Image Totals
+      7416        452       1428         28          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 7856 (   7.67kB)
-    Total RW  Size (RW Data + ZI Data)              2552 (   2.49kB)
-    Total ROM Size (Code + RO Data + RW Data)       7916 (   7.73kB)
+    Total RO  Size (Code + RO Data)                 8844 (   8.64kB)
+    Total RW  Size (RW Data + ZI Data)              1592 (   1.55kB)
+    Total ROM Size (Code + RO Data + RW Data)       8872 (   8.66kB)
 
 ==============================================================================
 

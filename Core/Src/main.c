@@ -98,6 +98,8 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM9_Init();
   /* USER CODE BEGIN 2 */
+  for (int i = 0; i < 8; i++)
+    WS2812_Data[i] = 0x00FF00;
   /* USER CODE END 2 */
 
   /* Infinite loop */

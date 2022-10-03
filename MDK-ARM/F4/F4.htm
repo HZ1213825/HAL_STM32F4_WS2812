@@ -3,7 +3,7 @@
 <title>Static Call Graph - [F4\F4.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image F4\F4.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Sat Oct 01 23:26:41 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Mon Oct 03 18:17:07 2022
 <BR><P>
 <H3>Maximum Stack Usage =        168 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -784,7 +784,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f401xc.o(RESET)
 </UL>
-<P><STRONG><a name="[77]"></a>WS2812_Send</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, ws2812.o(i.WS2812_Send))
+<P><STRONG><a name="[77]"></a>WS2812_Send</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, ws2812.o(i.WS2812_Send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = WS2812_Send &rArr; HAL_TIM_PWM_Start_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Stop_DMA
@@ -794,7 +794,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_PulseFinishedCallback
 </UL>
 
-<P><STRONG><a name="[8d]"></a>WS2812_Start</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, ws2812.o(i.WS2812_Start))
+<P><STRONG><a name="[8d]"></a>WS2812_Start</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, ws2812.o(i.WS2812_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = WS2812_Start &rArr; HAL_TIM_PWM_Start_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start_DMA
@@ -816,7 +816,7 @@ Global Symbols
 
 <P><STRONG><a name="[9d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[42]"></a>main</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[42]"></a>main</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = main &rArr; MX_TIM1_Init &rArr; HAL_TIM_MspPostInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WS2812_Start
